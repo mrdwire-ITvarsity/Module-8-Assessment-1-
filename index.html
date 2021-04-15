@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" and dir="ltr">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title>Login Form</title>
+    </head>
+    
+    <body>
+        <form class="login" action="login.html" method="POST">
+
+            <h1>Login</h1>
+            
+            <input type="text" name="" placeholder="Enter Username" id="username">
+            <input type="password" name="" placeholder="Enter Password" id="password">
+            <input type="submit" name="" value="Login" onclick="validate()">
+        </form>
+        
+        <script>
+            function validate(){
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                
+                validateuserCreds(username, password);
+                
+            }
+            
+            function validateuserCreds(username, password) {
+                var systemUsername= "User"
+                var stytemPassword= "01234"
+                
+                if (username==systemUsername && password==stytemPassword){
+                    
+                    alert("login succesfull");
+                    return false;
+                }
+                
+                else {
+                    alert("login failed...try again")
+                }
+            }
+        
+        </script>
+    
+    </body>
+</html>
